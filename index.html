@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Van Hung</title>
+    <title>Yến Nhi</title>
     <style>
    *{
     padding: 0;
@@ -22,7 +22,7 @@
     width: 150px;
     height: 200px;
     transform-style: preserve-3d;
-    animation: animate 17s linear infinite;
+    animation: animate 19s linear infinite;
    }
    @keyframes animate {
     0%{
@@ -106,7 +106,7 @@
 </head>
 <body>
     <div class="box">
-        <!-- <div class="chu"><img src="./imgs/img_9.png" ></div> -->
+        <div class="chu"><img src="./imgs/img_9.png" ></div>
         <span class="img_hpbd" style="--i:1;"><img src="./imgs/img_1.jpg" alt=""></span>
         <span class="img_hpbd" style="--i:2;"><img src="./imgs/img_2.jpg" alt=""></span>
         <span class="img_hpbd" style="--i:3;"><img src="./imgs/img_3.jpg" alt=""></span>
@@ -115,12 +115,16 @@
         <span class="img_hpbd" style="--i:6;"><img src="./imgs/img_6.jpg" alt=""></span>
         <span class="img_hpbd" style="--i:7;"><img src="./imgs/img_7.jpg" alt=""></span>
         <span class="img_hpbd" style="--i:8;"><img src="./imgs/img_8.jpg" alt=""></span>
-        <audio src="./mp3/tinh-yeu-xanh-la-juju.mp3" class="audio" type="audio/mp3" playsinline="true" ></audio>
+        <audio src="./mp3/tinh-yeu-xanh-la-juju.mp3" id="audio" type="audio/mp3" playsinline="true" ></audio>
     </div>
     
     <script>
-       const b=document.querySelector('.audio')
-            b.play()
+       let b=document.querySelector('#audio')
+       const nhan= document.querySelector(".chu")
+       nhan.onclick=function(){
+        b.play()
+       }
+       console.log(b)
     </script>
 </body>
 </html>
